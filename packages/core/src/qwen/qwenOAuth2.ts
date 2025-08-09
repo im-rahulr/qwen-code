@@ -19,6 +19,7 @@ const QWEN_OAUTH_BASE_URL = 'https://chat.qwen.ai';
 
 const QWEN_OAUTH_DEVICE_CODE_ENDPOINT = `${QWEN_OAUTH_BASE_URL}/api/v1/oauth2/device/code`;
 const QWEN_OAUTH_TOKEN_ENDPOINT = `${QWEN_OAUTH_BASE_URL}/api/v1/oauth2/token`;
+const QWEN_OAUTH_USERINFO_ENDPOINT = `${QWEN_OAUTH_BASE_URL}/api/v1/oauth2/userinfo`;
 
 // OAuth Client Configuration
 const QWEN_OAUTH_CLIENT_ID = 'f0304373b74a44d2b584a3fb70ca9e56';
@@ -99,6 +100,16 @@ export interface QwenCredentials {
   expiry_date?: number;
   token_type?: string;
   resource_url?: string;
+}
+
+/**
+ * Qwen user information interface
+ */
+export interface QwenUserInfo {
+  email?: string;
+  name?: string;
+  sub?: string;
+  picture?: string;
 }
 
 /**
@@ -217,6 +228,7 @@ export interface IQwenOAuth2Client {
   setCredentials(credentials: QwenCredentials): void;
   getCredentials(): QwenCredentials;
   getAccessToken(): Promise<{ token?: string }>;
+  getUserInfo(): Promise<QwenUserInfo | null>;
   requestDeviceAuthorization(options: {
     scope: string;
     code_challenge: string;
@@ -260,6 +272,34 @@ export class QwenOAuth2Client implements IQwenOAuth2Client {
     }
 
     return { token: undefined };
+  }
+
+  async getUserInfo(): Promise<QwenUserInfo | null> {
+    try {
+      const { token } = await this.getAccessToken();
+      if (!token) {
+        return null;
+      }
+
+      const response = await fetch(QWEN_OAUTH_USERINFO_ENDPOINT, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        console.debug(`Failed to fetch Qwen user info: ${response.status} ${response.statusText}`);
+        return null;
+      }
+
+      const userInfo = await response.json() as QwenUserInfo;
+      return userInfo;
+    } catch (error) {
+      console.debug('Error fetching Qwen user info:', error);
+      return null;
+    }
   }
 
   async requestDeviceAuthorization(options: {
@@ -827,6 +867,22 @@ async function cacheQwenCredentials(credentials: QwenCredentials) {
 
   const credString = JSON.stringify(credentials, null, 2);
   await fs.writeFile(filePath, credString);
+}
+
+/**
+ * Get the authenticated Qwen user's email address
+ * @param config - The configuration object
+ * @returns The user's email address or null if not available
+ */
+export async function getQwenUserEmail(config: Config): Promise<string | null> {
+  try {
+    const client = await getQwenOAuthClient(config);
+    const userInfo = await client.getUserInfo();
+    return userInfo?.email || null;
+  } catch (error) {
+    console.debug('Error getting Qwen user email:', error);
+    return null;
+  }
 }
 
 /**

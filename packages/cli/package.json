@@ -9,7 +9,7 @@
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "codec": "dist/index.js"
+    "codec": "codec.js"
   },
   "scripts": {
     "build": "node ../../scripts/build_package.js",
@@ -30,6 +30,7 @@
   "dependencies": {
     "@google/genai": "1.9.0",
     "@iarna/toml": "^2.2.5",
+    "@supabase/supabase-js": "^2.39.0",
     "codec-core": "file:../core",
     "@types/update-notifier": "^6.0.8",
     "command-exists": "^1.2.9",

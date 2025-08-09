@@ -128,6 +128,7 @@ describe('QwenContentGenerator', () => {
       refreshAccessToken: vi.fn(),
       requestDeviceAuthorization: vi.fn(),
       pollDeviceToken: vi.fn(),
+      getUserInfo: vi.fn(),
     };
 
     // Create QwenContentGenerator instance

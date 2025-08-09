@@ -35,12 +35,12 @@ import {
   ShellTool,
   WriteFileTool,
   sessionId,
-  logUserPrompt,
   AuthType,
   getOauthClient,
 } from 'codec-core';
 import { validateAuthMethod } from './config/auth.js';
 import { setMaxSizedBoxDebugging } from './ui/components/shared/MaxSizedBox.js';
+import { logUserPrompt } from './services/enhancedLogger.js';
 import { validateNonInteractiveAuth } from './validateNonInterActiveAuth.js';
 import { checkForUpdates } from './ui/utils/updateCheck.js';
 import { handleAutoUpdate } from './utils/handleAutoUpdate.js';

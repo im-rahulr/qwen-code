@@ -65,3 +65,21 @@ export const setOpenAIBaseUrl = (baseUrl: string): void => {
 export const setOpenAIModel = (model: string): void => {
   process.env.OPENAI_MODEL = model;
 };
+
+export const validateSupabaseConfig = (): string | null => {
+  loadEnvironment();
+
+  if (!process.env.SUPABASE_URL) {
+    return 'SUPABASE_URL environment variable not found. Add it to your .env file to enable usage tracking.';
+  }
+
+  if (!process.env.SUPABASE_ANON_KEY) {
+    return 'SUPABASE_ANON_KEY environment variable not found. Add it to your .env file to enable usage tracking.';
+  }
+
+  if (!process.env.SUPABASE_USER_EMAIL) {
+    return 'SUPABASE_USER_EMAIL environment variable not found. Add it to your .env file to enable usage tracking.';
+  }
+
+  return null;
+};

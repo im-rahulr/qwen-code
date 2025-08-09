@@ -63,6 +63,17 @@ export interface AccessibilitySettings {
   disableLoadingPhrases?: boolean;
 }
 
+export interface SupabaseSettings {
+  enabled?: boolean;
+  url?: string;
+  anonKey?: string;
+  userEmail?: string;
+  trackPrompts?: boolean;
+  trackTokens?: boolean;
+  trackMetadata?: boolean;
+  retentionDays?: number;
+}
+
 export interface Settings {
   theme?: string;
   customThemes?: Record<string, CustomTheme>;
@@ -81,6 +92,7 @@ export interface Settings {
   contextFileName?: string | string[];
   accessibility?: AccessibilitySettings;
   telemetry?: TelemetrySettings;
+  supabase?: SupabaseSettings;
   usageStatisticsEnabled?: boolean;
   preferredEditor?: string;
   bugCommand?: BugCommandSettings;

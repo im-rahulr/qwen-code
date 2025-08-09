@@ -19,7 +19,6 @@ import {
   isNodeError,
   MessageSenderType,
   ToolCallRequestInfo,
-  logUserPrompt,
   GitService,
   EditorType,
   ThoughtSummary,
@@ -44,6 +43,7 @@ import { handleAtCommand } from './atCommandProcessor.js';
 import { findLastSafeSplitPoint } from '../utils/markdownUtilities.js';
 import { useStateAndRef } from './useStateAndRef.js';
 import { UseHistoryManagerReturn } from './useHistoryManager.js';
+import { logUserPrompt } from '../../services/enhancedLogger.js';
 import { useLogger } from './useLogger.js';
 import { promises as fs } from 'fs';
 import path from 'path';
