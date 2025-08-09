@@ -1,5 +1,5 @@
 {
-  "name": "@qwen-code/qwen-code",
+  "name": "codec",
   "version": "0.0.4",
   "engines": {
     "node": ">=20.0.0"
@@ -49,7 +49,7 @@
     "clean": "node scripts/clean.js"
   },
   "bin": {
-    "qwen": "bundle/gemini.js"
+    "codec": "bundle/gemini.js"
   },
   "files": [
     "bundle/",

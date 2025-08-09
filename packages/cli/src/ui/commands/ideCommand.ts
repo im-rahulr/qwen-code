@@ -10,7 +10,7 @@ import {
   IDEConnectionStatus,
   getIdeDisplayName,
   getIdeInstaller,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 import {
   CommandContext,
   SlashCommand,

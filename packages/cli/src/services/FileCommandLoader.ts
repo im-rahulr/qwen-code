@@ -13,7 +13,7 @@ import {
   Config,
   getProjectCommandsDir,
   getUserCommandsDir,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 import { ICommandLoader } from './types.js';
 import {
   CommandContext,

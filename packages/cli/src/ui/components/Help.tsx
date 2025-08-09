@@ -167,7 +167,7 @@ export const Help: React.FC<Help> = ({ commands }) => (
     <Text color={Colors.Foreground}>
       For a full list of shortcuts, see{' '}
       <Text bold color={Colors.AccentPurple}>
-        docs/keyboard-shortcuts.md
+        https://rahul-5.gitbook.io/rahul-docs/product-guides/codecraft-cli-v2
       </Text>
     </Text>
   </Box>

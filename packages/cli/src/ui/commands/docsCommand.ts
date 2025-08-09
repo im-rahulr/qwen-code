@@ -15,10 +15,10 @@ import { MessageType } from '../types.js';
 
 export const docsCommand: SlashCommand = {
   name: 'docs',
-  description: 'open full Qwen Code documentation in your browser',
+  description: 'open full Codecraft CLI documentation in your browser',
   kind: CommandKind.BUILT_IN,
   action: async (context: CommandContext): Promise<void> => {
-    const docsUrl = 'https://github.com/QwenLM/qwen-code';
+    const docsUrl = 'https://rahul-5.gitbook.io/rahul-docs/product-guides/codecraft-cli-v2';
 
     if (process.env.SANDBOX && process.env.SANDBOX !== 'sandbox-exec') {
       context.ui.addItem(

@@ -16,7 +16,7 @@ import {
   SandboxConfig,
   GeminiClient,
   ideContext,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 import { LoadedSettings, SettingsFile, Settings } from '../config/settings.js';
 import process from 'node:process';
 import { useGeminiStream } from './hooks/useGeminiStream.js';
@@ -86,10 +86,10 @@ interface MockServerConfig {
   getUserTier: Mock<() => Promise<string | undefined>>;
 }
 
-// Mock @qwen-code/qwen-code-core and its Config class
-vi.mock('@qwen-code/qwen-code-core', async (importOriginal) => {
+// Mock codec-core and its Config class
+vi.mock('codec-core', async (importOriginal) => {
   const actualCore =
-    await importOriginal<typeof import('@qwen-code/qwen-code-core')>();
+    await importOriginal<typeof import('codec-core')>();
   const ConfigClassMock = vi
     .fn()
     .mockImplementation((optionsPassedToConstructor) => {
@@ -239,7 +239,7 @@ vi.mock('./config/auth.js', () => ({
 
 const mockedCheckForUpdates = vi.mocked(checkForUpdates);
 const { isGitRepository: mockedIsGitRepository } = vi.mocked(
-  await import('@qwen-code/qwen-code-core'),
+  await import('codec-core'),
 );
 
 vi.mock('node:child_process');

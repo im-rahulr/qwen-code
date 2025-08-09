@@ -14,7 +14,7 @@ import {
   ToolExecuteConfirmationDetails,
   ToolMcpConfirmationDetails,
   Config,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 import {
   RadioButtonSelect,
   RadioSelectItem,

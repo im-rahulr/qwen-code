@@ -7,7 +7,7 @@
 import {
   getErrorMessage,
   loadServerHierarchicalMemory,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 import { MessageType } from '../types.js';
 import {
   CommandKind,

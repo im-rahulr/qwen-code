@@ -23,7 +23,7 @@ import {
   TelemetryTarget,
   FileFilteringOptions,
   IdeClient,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 import { Settings } from './settings.js';
 
 import { Extension, annotateActiveExtensions } from './extension.js';

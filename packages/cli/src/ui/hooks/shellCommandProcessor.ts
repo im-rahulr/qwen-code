@@ -16,7 +16,7 @@ import {
   isBinary,
   ShellExecutionResult,
   ShellExecutionService,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 import { type PartListUnion } from '@google/genai';
 import { UseHistoryManagerReturn } from './useHistoryManager.js';
 import { SHELL_COMMAND_NAME } from '../constants.js';

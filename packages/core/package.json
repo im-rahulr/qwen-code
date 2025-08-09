@@ -1,7 +1,7 @@
 {
-  "name": "@qwen-code/qwen-code-core",
+  "name": "codec-core",
   "version": "0.0.4",
-  "description": "Qwen Code Core",
+  "description": "Codec Core",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/QwenLM/qwen-code.git"

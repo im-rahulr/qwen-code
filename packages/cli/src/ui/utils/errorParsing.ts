@@ -13,7 +13,7 @@ import {
   isGenericQuotaExceededError,
   isApiError,
   isStructuredError,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 
 // Free Tier message functions
 const getRateLimitErrorMessageGoogleFree = (

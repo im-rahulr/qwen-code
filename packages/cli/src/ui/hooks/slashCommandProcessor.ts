@@ -16,7 +16,7 @@ import {
   logSlashCommand,
   SlashCommandEvent,
   ToolConfirmationOutcome,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 import { useSessionStats } from '../contexts/SessionContext.js';
 import {
   Message,

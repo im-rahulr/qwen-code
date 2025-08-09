@@ -1,31 +1,31 @@
-# Qwen Code
+# Codec CLI
 
 <div align="center">
 
-![Qwen Code Screenshot](./docs/assets/qwen-screenshot.png)
+![Codec Screenshot](./docs/assets/qwen-screenshot.png)
 
-[![npm version](https://img.shields.io/npm/v/@qwen-code/qwen-code.svg)](https://www.npmjs.com/package/@qwen-code/qwen-code)
-[![License](https://img.shields.io/github/license/QwenLM/qwen-code.svg)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/codec.svg)](https://www.npmjs.com/package/codec)
+[![License](https://img.shields.io/github/license/im-rahulr/qwen-code.svg)](./LICENSE)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg)](https://nodejs.org/)
-[![Downloads](https://img.shields.io/npm/dm/@qwen-code/qwen-code.svg)](https://www.npmjs.com/package/@qwen-code/qwen-code)
+[![Downloads](https://img.shields.io/npm/dm/codec.svg)](https://www.npmjs.com/package/codec)
 
 **AI-powered command-line workflow tool for developers**
 
-[Installation](#installation) • [Quick Start](#quick-start) • [Features](#key-features) • [Documentation](./docs/) • [Contributing](./CONTRIBUTING.md)
+[Installation](#installation) • [Quick Start](#quick-start) • [Features](#key-features) • [Documentation](https://rahul-5.gitbook.io/rahul-docs/product-guides/codecraft-cli-v2) • [Contributing](./CONTRIBUTING.md)
 
 </div>
 
-Qwen Code is a powerful command-line AI workflow tool adapted from [**Gemini CLI**](https://github.com/google-gemini/gemini-cli) ([details](./README.gemini.md)), specifically optimized for [Qwen3-Coder](https://github.com/QwenLM/Qwen3-Coder) models. It enhances your development workflow with advanced code understanding, automated tasks, and intelligent assistance.
+Codec is a powerful command-line AI workflow tool adapted from [**Gemini CLI**](https://github.com/google-gemini/gemini-cli) ([details](./README.gemini.md)), specifically optimized for [Qwen3-Coder](https://github.com/QwenLM/Qwen3-Coder) models. It enhances your development workflow with advanced code understanding, automated tasks, and intelligent assistance.
 
 ## 💡 Free Options Available
 
-Get started with Qwen Code at no cost using any of these free options:
+Get started with Codec at no cost using any of these free options:
 
 ### 🔥 Qwen OAuth (Recommended)
 
 - **2,000 requests per day** with no token limits
 - **60 requests per minute** rate limit
-- Simply run `qwen` and authenticate with your qwen.ai account
+- Simply run `codec` and authenticate with your qwen.ai account
 - Automatic credential management and refresh
 - Use `/auth` command to switch to Qwen OAuth if you have initialized with OpenAI compatible mode
 
@@ -37,7 +37,7 @@ Get started with Qwen Code at no cost using any of these free options:
 For detailed setup instructions, see [Authorization](#authorization).
 
 > [!WARNING]
-> **Token Usage Notice**: Qwen Code may issue multiple API calls per cycle, resulting in higher token usage (similar to Claude Code). We're actively optimizing API efficiency.
+> **Token Usage Notice**: Codec may issue multiple API calls per cycle, resulting in higher token usage (similar to Claude Code). We're actively optimizing API efficiency.
 
 ## Key Features
 
@@ -58,24 +58,41 @@ curl -qL https://www.npmjs.com/install.sh | sh
 ### Install from npm
 
 ```bash
-npm install -g @qwen-code/qwen-code@latest
-qwen --version
+npm install -g codec@latest
+codec --version
+```
+
+### Update Codec
+
+To update to the latest version:
+
+```bash
+npm update -g codec
+```
+
+### Uninstall Codec
+
+To remove Codec from your system:
+
+```bash
+npm uninstall -g codec
 ```
 
 ### Install from source
 
 ```bash
-git clone https://github.com/QwenLM/qwen-code.git
+git clone https://github.com/im-rahulr/qwen-code.git
 cd qwen-code
 npm install
+npm run build
 npm install -g .
 ```
 
 ## Quick Start
 
 ```bash
-# Start Qwen Code
-qwen
+# Start Codec
+codec
 
 # Example commands
 > Explain this codebase structure
@@ -115,7 +132,7 @@ The easiest way to get started - completely free with generous quotas:
 
 ```bash
 # Just run this command and follow the browser authentication
-qwen
+codec
 ```
 
 **What happens:**
@@ -213,7 +230,7 @@ export OPENAI_MODEL="qwen/qwen3-coder:free"
 
 ```bash
 cd your-project/
-qwen
+codec
 
 # Architecture analysis
 > Describe the main pieces of this system's architecture
@@ -311,7 +328,7 @@ qwen
 - `/clear` - Clear conversation history
 - `/compress` - Compress history to save tokens
 - `/status` - Show current session information
-- `/exit` or `/quit` - Exit Qwen Code
+- `/exit` or `/quit` - Exit Codec CLI
 
 ### Keyboard Shortcuts
 
@@ -323,10 +340,10 @@ qwen
 
 ### Terminal-Bench Performance
 
-| Agent     | Model              | Accuracy |
-| --------- | ------------------ | -------- |
-| Qwen Code | Qwen3-Coder-480A35 | 37.5%    |
-| Qwen Code | Qwen3-Coder-30BA3B | 31.3%    |
+| Agent | Model              | Accuracy |
+| ----- | ------------------ | -------- |
+| Codec | Qwen3-Coder-480A35 | 37.5%    |
+| Codec | Qwen3-Coder-30BA3B | 31.3%    |
 
 ## Development & Contributing
 
@@ -348,4 +365,4 @@ This project is based on [Google Gemini CLI](https://github.com/google-gemini/ge
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=QwenLM/qwen-code&type=Date)](https://www.star-history.com/#QwenLM/qwen-code&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=im-rahulr/qwen-code&type=Date)](https://www.star-history.com/#im-rahulr/qwen-code&Date)

@@ -8,7 +8,7 @@ import {
   Config,
   getErrorMessage,
   getMCPServerPrompts,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 import {
   CommandContext,
   CommandKind,

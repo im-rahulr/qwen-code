@@ -63,7 +63,7 @@ import {
   AuthType,
   type IdeContext,
   ideContext,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 import { validateAuthMethod } from '../config/auth.js';
 import { useLogger } from './hooks/useLogger.js';
 import { StreamingContext } from './contexts/StreamingContext.js';
@@ -83,7 +83,7 @@ import {
   isProQuotaExceededError,
   isGenericQuotaExceededError,
   UserTierId,
-} from '@qwen-code/qwen-code-core';
+} from 'codec-core';
 import { UpdateObject } from './utils/updateCheck.js';
 import ansiEscapes from 'ansi-escapes';
 import { OverflowProvider } from './contexts/OverflowContext.js';
