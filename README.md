@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![Codec Screenshot](./docs/assets/qwen-screenshot.png)
-
 [![npm version](https://img.shields.io/npm/v/codec.svg)](https://www.npmjs.com/package/codec)
 [![License](https://img.shields.io/github/license/im-rahulr/qwen-code.svg)](./LICENSE)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg)](https://nodejs.org/)
