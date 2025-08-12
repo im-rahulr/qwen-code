@@ -28,7 +28,7 @@ export const Tips: React.FC<TipsProps> = ({ config }) => {
         <Text color={Colors.Foreground}>
           3. Create{' '}
           <Text bold color={Colors.AccentPurple}>
-            QWEN.md
+            CODECRAFT.md
           </Text>{' '}
           files to customize your interactions with Codecraft CLI.
         </Text>

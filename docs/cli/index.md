@@ -1,6 +1,6 @@
-# Qwen Code CLI
+# Codecraft CLI
 
-Within Qwen Code, `packages/cli` is the frontend for users to send and receive prompts with Qwen and other AI models and their associated tools. For a general overview of Qwen Code, see the [main documentation page](../index.md).
+Within Codecraft, `packages/cli` is the frontend for users to send and receive prompts with Qwen and other AI models and their associated tools. For a general overview of Codecraft, see the [main documentation page](../index.md).
 
 ## Navigating this section
 

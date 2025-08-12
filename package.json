@@ -49,9 +49,10 @@
     "clean": "node scripts/clean.js"
   },
   "bin": {
-    "codec": "bundle/gemini.js"
+    "codec": "bin/codec.js"
   },
   "files": [
+    "bin/",
     "bundle/",
     "README.md",
     "LICENSE"
